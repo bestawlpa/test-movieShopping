@@ -10,8 +10,8 @@ export const OrderProvider = ({ children }) => {
   const [message, setMessage] = useState("");
 
   const confirmOrder = (movie) => {
-    setOrder((prevOrder) => {
-      const updatedOrder = [...prevOrder, movie];
+    setOrder((e) => {
+      const updatedOrder = [...e, movie];
       localStorage.setItem("order", JSON.stringify(updatedOrder));
 
       setMessage("confirmOrdert success!");

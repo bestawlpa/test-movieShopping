@@ -15,8 +15,8 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (movie) => {
-    setCart((prevMovie) => {
-      const updatedCart = [...prevMovie, movie];
+    setCart((e) => {
+      const updatedCart = [...e, movie];
       localStorage.setItem("cart", JSON.stringify(updatedCart));
 
       setMessage("add movie in cart success!");
